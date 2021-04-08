@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    font-family: 'Segoe UI';
+}
+body {
+    background-color:#222222;
+	font-size: 10px;
+    color: white;
+}
+main > h1 {
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 24px;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "plaatsnaam"
+        "maps"
+        "preview";
+    margin: 5%;
+    margin-top: 2%;
+    grid-row-gap: 15px;
+}
+.plaatsnaam, .maps, .preview{
+    background-color: white;
+    padding: 5%;
+}
+.plaatsnaam{
+    grid-area: plaatsnaam;
+    background-color: transparent;
+    padding-left: 0%;
+}
+#plaatsnaam {
+    font-size: 18px;
+    font-weight: bold;
+}
+#onderregel, #plaats {
+    font-size: 15px;
+}
+.maps{
+    grid-area: maps;
+    background-color: white;
+    padding: 0%;
+}
+#herlaadpagina{
+    margin-top: 20px;
+}
+#btn-reload {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #383838;
+    color: white;
+}
+#btn-reload:hover {
+    font-weight: normal;
+    font-family: 'Segoe UI';
+}
+.contbtn{
+   padding: 5%;
+   display: grid;
+   grid-template-areas: 
+       "btn-zoek";
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-zoek{
+    grid-area: btn-zoek;
+    padding: 7px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #383838;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.btn-zoek:hover {
+    font-weight: normal;
+}
+.preview{
+    grid-area: preview;
+    background-color: white;
+    padding: 0%;
+}
+#maps {
+	width: 100%;
+	height: 250px;
+}
+#maps > img {
+    display: none;
+}
+#preview{
+    width: 100%;
+    height: 250px;
+}
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 899px) and (min-width: 550px) {
+    .container {
+    display: grid;
+    grid-template-areas: 
+        "plaatsnaam plaatsnaam"
+        "maps preview";
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3%;
+    grid-column-gap: 3%;
+    }
+    #preview {
+        height: 100%;
+    }
+    .weeradvies {
+        width: 196%;
+    }
+    .plaatsnaam{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .logo img{
+        height: auto;
+        width: 80vw;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+    
+    
+@media only screen and (max-width: 1313px) and (min-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "plaatsnaam plaatsnaam"
+            "maps preview";
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+    }
+    #preview {
+        height: 100%;
+    }
+    .plaatsnaam{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .logo img{
+        height: auto;
+        width: 60vw;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}    
+
+
+
+@media only screen and (min-width: 1314px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "plaatsnaam plaatsnaam plaatsnaam"
+            "maps maps preview";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+    }
+    #preview {
+        height: 100%;
+    }
+    .plaatsnaam{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .logo img{
+        height: auto;
+        width: 20vw;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
